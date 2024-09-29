@@ -1,0 +1,477 @@
+ .menu__list {
+ 	display: none;
+
+ }
+
+ body {
+ 	height: 100%;
+ 	width: 100%;
+ 	position: relative;
+ }
+
+ .header {
+ 	position: sticky;
+ 	z-index: 10;
+ 	top: 0;
+ 	width: 100%;
+ 	height: 3.138rem;
+ 	background: linear-gradient(to right, #0189C9 0%, #ab0fd6 100%);
+ 	display: flex;
+ 	justify-content: space-between;
+ 	justify-content: center;
+ 	align-items: center;
+ 	padding: 0 0 0 1rem;
+ }
+
+ .header__logo-img {
+ 	cursor: pointer;
+ }
+
+ .header__barra {
+ 	width: 100%;
+ 	height: 100%;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: flex-end;
+ }
+
+
+ .barra__list {
+ 	position: relative;
+ 	width: 12rem;
+ 	height: 100%;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	justify-content: end;
+ 	gap: .5rem;
+
+ }
+
+ .barra__item {
+ 	cursor: pointer;
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: center;
+ 	justify-content: center;
+ 	width: 3.5rem;
+ 	height: 100%;
+ }
+
+ .barra__icon {
+ 	width: .850rem;
+ }
+
+ .barra__icon-perfil {
+ 	margin-top: 0.019;
+ }
+
+
+
+ /*estilo de seleccion del header*/
+ .icon__selection_header {
+ 	border-bottom: 4px solid #00B0FF;
+ }
+
+
+ /*!Formulario*/
+
+ hr {
+ 	opacity: .20;
+ }
+
+ .formulario {
+ 	width: 100%;
+ 	position: fixed;
+ 	z-index: 20;
+ 	padding: 0 1rem;
+ 	background-color: #FBFBFB;
+ 	display: flex;
+ 	flex-direction: column;
+ 	box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+ 	visibility: hidden;
+ 	/* Agregamos transición para el cambio en la transformación */
+ 	transition: transform 0.2s ease;
+ 	/* Centramos el contenedor y lo escalamos */
+ 	transform: scale(0);
+ 	transform-origin: center;
+
+ }
+
+ .formularioActivate {
+ 	visibility: visible;
+ 	/* Escalamos el contenedor al tamaño deseado */
+ 	transform: scale(1);
+ }
+
+ .formulario #email,
+ #pass {
+ 	padding: .5rem;
+ 	opacity: .20;
+ }
+
+ .formulario__titulo {
+ 	font-weight: normal;
+ 	margin: 1rem 0;
+ }
+
+ .formulario__email {
+ 	font-size: .9rem;
+ 	font-weight: bold;
+ 	margin: 1.3rem 0 .7rem 0;
+ }
+
+ .formulario__pass {
+ 	font-size: .9rem;
+ 	font-weight: bold;
+ 	margin: 1.3rem 0 .7rem 0;
+ }
+
+ .loginPass {
+ 	margin: 1.120rem 0;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: space-between;
+ }
+
+ .formulario__iniciarSesion {
+ 	cursor: pointer;
+ 	font-size: .9rem;
+ 	color: white;
+ 	padding: .750rem;
+ 	border-radius: .3rem;
+ 	background-color: #00B0FF;
+ 	border: none;
+ }
+
+ .btn_regristrarse {
+ 	cursor: pointer;
+ 	font-size: .850rem;
+ 	margin: 1rem 0;
+ 	padding: .7rem;
+ 	text-align: center;
+ 	border-radius: 1.5rem;
+ 	border: 1.5px solid #00B0FF;
+ 	background-color: transparent;
+ 	color: #00B0FF;
+ }
+
+ /*!Buscador*/
+
+ .buscar {
+ 	padding-left: .6rem;
+ 	visibility: hidden;
+ 	position: absolute;
+ 	width: 100%;
+ 	height: 100%;
+ 	background: linear-gradient(to right, #0189C9 0%, #ab0fd6 100%);
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	justify-content: flex-start;
+
+ 	transition: transform 0.2s ease;
+ 	/* Centramos el contenedor y lo escalamos */
+ 	transform: scale(0);
+ 	transform-origin: center;
+
+ 	/*ver el formulario*/
+ 	/* visibility: visible;
+	transform: scale(1);  */
+
+ }
+
+ .buscar input {
+ 	color: white;
+ 	width: 95%;
+ 	background-color: rgba(0, 0, 0, 0.2);
+ 	/* Color de fondo más oscuro */
+ 	border: none;
+ 	padding: .3rem 0;
+ 	padding-left: 1rem;
+ 	border-radius: .150rem;
+
+ }
+
+ .buscar input::placeholder {
+ 	font-size: .930rem;
+ 	color: rgba(255, 255, 255, 0.750);
+ 	/* Color del texto de placeholder */
+ }
+
+ .buscar input:focus {
+ 	outline: none;
+ 	/* Para quitar el borde al enfocar */
+ }
+
+ .buscar__btn-close {
+ 	width: 4rem;
+ 	text-align: center;
+ 	cursor: pointer;
+ 	color: white;
+ 	font-size: 1.3rem;
+ }
+
+ .buscarActivate {
+ 	visibility: visible;
+ 	/* Escalamos el contenedor al tamaño deseado */
+ 	transform: scale(1);
+ }
+
+ .buscarDesactivate {
+ 	transform: scale(0);
+ }
+
+
+ /*!Menu icon*/
+
+ .menu__button {
+ 	position: relative;
+ 	width: 40px;
+ 	height: 40px;
+ 	display: flex;
+ 	cursor: pointer;
+ }
+
+ .line {
+ 	position: absolute;
+ 	width: 1.6rem;
+ 	height: 1.7px;
+ 	background-color: #fff;
+ 	transition: all 0.2s ease;
+ }
+
+
+
+ .line:nth-child(1) {
+ 	top: 35%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+ }
+
+ .line:nth-child(2) {
+ 	width: 1.3rem;
+ 	top: 50%;
+ 	left: 56%;
+ 	transform: translate(-50%, -50%);
+ }
+
+ .line:nth-child(3) {
+ 	width: 1.4rem;
+ 	top: 63%;
+ 	left: 53%;
+ 	transform: translate(-50%, -50%);
+ }
+
+
+ .open .line {
+ 	background-color: #fff;
+
+ }
+
+
+ .open .line:nth-child(1) {
+ 	height: 2.5px;
+ 	top: 18px;
+ 	left: 9px;
+ 	width: 25px;
+ 	transform: rotate(-45deg);
+ }
+
+ .open .line:nth-child(2) {
+ 	opacity: 0;
+ }
+
+ .open .line:nth-child(3) {
+ 	height: 2.5px;
+ 	top: 18px;
+ 	left: 9px;
+ 	width: 25px;
+ 	transform: rotate(45deg);
+ }
+
+ /*!menu content*/
+
+ .scroll__body_none {
+ 	overflow-y: hidden;
+ }
+
+ .scroll__body_none>.menu__container>.nav__category-anime>.nav__listCategory-anime {
+ 	overflow-x: hidden;
+ 	overflow-y: scroll;
+
+ }
+
+
+ .menu__container {
+ 	position: relative;
+ 	border-top: 2px solid red;
+ 	z-index: 100;
+ 	position: fixed;
+ 	width: 100vw;
+ 	height: 100vh;
+ 	top: 0;
+ 	background-color: rgba(0, 0, 0, 0.8);
+ 	display: grid;
+ 	grid-template-columns: 220px calc(100% - 220px);
+ 	grid-template-rows: 100%;
+ 	transform: translateX(-99999px);
+ 	transition: transform 50ms ease;
+ }
+
+ .border_container_menuActivate {
+ 	transform: translateX(0);
+ }
+
+
+
+
+ /*!Seccion de menu*/
+
+ .nav__menu__container {
+ 	width: 220px;
+ 	height: 100%;
+
+ }
+
+ .brr__menu-list {
+ 	width: 100%;
+ 	height: 100%;
+ 	position: relative;
+ 	background-color: #002333;
+ }
+
+ /* .brr__espacioRestante {
+ 	cursor: pointer;
+ 	color: white;
+ } */
+
+ .brr__menu-item {
+ 	background-color: rgba(0, 176, 255, .250);
+ 	padding: 1rem 0;
+ 	padding-left: 1rem;
+ 	border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+ 	display: flex;
+ 	align-items: center;
+ 	gap: 1rem;
+ }
+
+ .ico_img {
+ 	opacity: .6;
+ }
+
+ .brr__txt-item {
+ 	color: rgba(255, 255, 255, .5);
+ 	font-size: 1.1rem;
+ }
+
+ .brr__menu-item img {
+ 	width: 1rem;
+ }
+
+ .brr__menu-item:last-child {
+ 	border-bottom: 0;
+ }
+
+
+ .chebron_right {
+ 	cursor: pointer;
+ 	position: relative;
+ 	width: 3rem;
+ 	height: 1.5rem;
+ }
+
+ .chebron_line {
+ 	position: absolute;
+ 	width: .5rem;
+ 	background-color: #fff;
+ 	height: 2.5px;
+ }
+
+ .chebron_line:nth-child(1) {
+ 	top: 29%;
+ 	right: 2px;
+ 	transform: rotate(45deg);
+ }
+
+ .chebron_line:nth-child(2) {
+ 	top: 47%;
+ 	right: 2px;
+ 	transform: rotate(-45deg);
+ }
+
+ /*Cambio de direccion del chebron*/
+
+ .chebron_left .chebron_line:nth-child(1) {
+ 	transition: .2s ease;
+ 	top: 29%;
+ 	right: 2px;
+ 	transform: rotate(-45deg);
+ }
+
+ .chebron_left .chebron_line:nth-child(2) {
+ 	transition: .2s ease;
+ 	top: 47%;
+ 	right: 2px;
+ 	transform: rotate(45deg);
+ }
+
+
+ /*!Contenido del menu*/
+
+ /*contenedor de lista*/
+ .nav__category-anime {
+ 	position: relative;
+ 	cursor: pointer;
+ 	/* background-color: greenyellow; */
+ }
+
+
+ /*Lista de categorias*/
+ .nav__listCategory-anime {
+ 	visibility: hidden;
+ 	width: 100%;
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	bottom: 0;
+ 	background-color: #fff;
+	opacity: 0;
+	transition: opacity .2s ease;
+ }
+
+ .nav_category-item {
+ 	border-bottom: 1px solid rgba(0, 0, 0, .1);
+ }
+
+ .nav_category-item>a {
+ 	display: block;
+ 	width: 100%;
+ 	height: 100%;
+ }
+
+ .nav_category-item {
+ 	padding: .6rem 0;
+ 	padding-left: .7rem;
+ 	color: #fff;
+ }
+
+ .nav__listCategory-animeActivate {
+	opacity: 1;
+ 	overflow-y: scroll;
+ 	visibility: visible;
+ }
+
+ .brr__menu-item-AllsCategorys-color{
+	transition: .2s ease;
+	background-color: #0189C9;	
+ }
+
+
+ .brr__menu-item-AllsCategorys-color .brr__txt-item{
+	color: #fff;
+}
+
+.brr__menu-item-AllsCategorys-color .ico_img{
+	opacity: 1;
+}
